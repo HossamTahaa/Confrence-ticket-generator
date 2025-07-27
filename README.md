@@ -4,7 +4,7 @@ A simple and interactive webpage that allows users to generate customized confer
 
 ## 🚀 Live Demo
 
-👉 [Click here to view the live site] (https://vercel.com/hossamtahaas-projects/confrence-ticket-generator)
+👉 [Click here to view the live site] (https://confrence-ticket-generator-two.vercel.app/))
 )
 
 ## 📸 Preview

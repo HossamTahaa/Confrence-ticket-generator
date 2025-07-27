@@ -1,0 +1,622 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
+
+:root {
+   --neutral-white: hsl(0, 0%, 100%);
+  --neutral-light: hsl(252, 6%, 83%);
+  --neutral-medium: hsl(245, 15%, 58%);
+  --neutral-dark: hsl(245, 19%, 35%);
+  --neutral-black: hsl(248, 70%, 10%);
+  --neutral-transparent: rgba(255, 255, 255, 0.05);
+
+   --orange-primary: hsl(7, 88%, 67%);
+  --orange-dark: hsl(7, 71%, 60%);
+
+   --orange-to-white-gradient: linear-gradient(
+    hsl(7, 86%, 67%),
+    hsl(0, 0%, 100%)
+  );
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inconsolata", monospace;
+  background-image: url("assets/images/pattern-circle.svg"),
+    url("assets/images/pattern-squiggly-line-top.svg"),
+    url("assets/images/pattern-lines.svg"),
+    url("assets/images/pattern-circle.svg"),
+    url("assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"),
+    url("assets/images/background-mobile.png");
+
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
+    no-repeat;
+
+background-position: 
+  50px -60px,
+  calc(100% - 20px) 20px,
+  center,
+  calc(100% + 70px) 50%,
+  left bottom,
+  center;
+
+background-size: 
+  200px,
+  400px,
+  auto,
+  150px,
+  800px,
+  cover;
+
+  color: #fff;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+ @media (min-width: 768px) {
+  body {
+    background-image: url("assets/images/pattern-circle.svg"),
+      url("assets/images/pattern-squiggly-line-top.svg"),
+      url("assets/images/pattern-lines.svg"),
+      url("assets/images/pattern-circle.svg"),
+      url("assets/images/pattern-squiggly-line-bottom-desktop.svg"),
+      url("assets/images/background-tablet.png");
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-image: url("assets/images/pattern-circle.svg"),
+      url("assets/images/pattern-squiggly-line-top.svg"),
+      url("assets/images/pattern-lines.svg"),
+      url("assets/images/pattern-circle.svg"),
+      url("assets/images/pattern-squiggly-line-bottom-desktop.svg"),
+      url("assets/images/background-desktop.png");
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.error {
+  color: var(--orange-primary) !important;
+}
+
+.gradient {
+  background: linear-gradient(
+    to right,
+    var(--orange-primary),
+    var(--neutral-white)
+  ); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+main {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  text-align: center;
+}
+
+ @media (max-width: 480px) {
+  main {
+    padding: 0.25rem;
+    margin: 0.25rem;
+  }
+}
+
+header {
+  margin: 10px 0 30px;
+}
+
+ @media (max-width: 480px) {
+  header {
+    margin: 5px 0 20px;
+  }
+}
+
+.heading_container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+ @media (max-width: 480px) {
+  .heading_container {
+    max-width: 100%;
+    padding: 0.5rem;
+  }
+}
+
+h2,
+h3 {
+  margin: 0.25rem 0 1rem;
+}
+
+ @media (max-width: 480px) {
+  h2 {
+    font-size: 1.5rem;
+    margin: 0.25rem 0 0.75rem;
+  }
+  
+  h3 {
+    font-size: 1rem;
+    margin: 0.25rem 0 0.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: xx-large;
+  }
+}
+
+h3,
+.upload-text {
+  color: var(--neutral-medium);
+}
+
+form {
+  padding: 0.5rem;
+  margin-top: 2rem;
+}
+
+ @media (max-width: 480px) {
+  form {
+    padding: 0.25rem;
+    margin-top: 1.5rem;
+  }
+}
+
+label {
+  text-align: left;
+  font-size: large;
+  color: var(--neutral-white);
+}
+
+ @media (max-width: 480px) {
+  label {
+    font-size: 1rem;
+  }
+}
+
+.upload-wrapper {
+  max-width: 320px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+ @media (max-width: 480px) {
+  .upload-wrapper {
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+}
+
+.upload-card {
+  text-align: center;
+  border: 2px dashed var(--neutral-medium);
+  border-radius: 12px;
+  padding: 20px 20px;
+  cursor: pointer;
+  margin: 10px 0;
+  background-color: var(--neutral-transparent);
+  backdrop-filter: blur(2px);
+}
+
+ @media (max-width: 480px) {
+  .upload-card {
+    padding: 15px 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+  }
+}
+
+.upload-note {
+  font-size: smaller;
+  color: var(--neutral-medium);
+}
+
+ @media (max-width: 480px) {
+  .upload-note {
+    font-size: 0.75rem;
+  }
+}
+
+.info {
+  text-align: left;
+}
+
+.upload-img {
+  height: 40px;
+  width: 40px;
+  margin: 0 auto 0.5rem;
+  border: 0.5px solid var(--neutral-dark);
+  border-radius: 12px;
+  background-color: var(--neutral-transparent);
+  backdrop-filter: blur(2px);
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+}
+
+ @media (max-width: 480px) {
+  .upload-img {
+    height: 35px;
+    width: 35px;
+    border-radius: 8px;
+  }
+}
+
+#photo-preview {
+  height: 40px;
+  width: 40px;
+  border-radius: 12px;
+  border: 0.5px solid var(--neutral-medium);
+}
+
+ @media (max-width: 480px) {
+  #photo-preview {
+    height: 35px;
+    width: 35px;
+    border-radius: 8px;
+  }
+}
+
+#drop-area.dragover {
+  background-color: var(--neutral-dark);
+  border-color: var(--orange-primary);
+}
+
+.action-btn {
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--neutral-transparent);
+  color: var(--neutral-white);
+  font-family: "Inconsolata", monospace;
+}
+
+ @media (max-width: 480px) {
+  .action-btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+.action-btn:hover {
+  color: var(--neutral-medium);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.img-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+ @media (max-width: 480px) {
+  .img-container {
+    gap: 0.25rem;
+  }
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 320px;
+  margin: 1rem auto;
+  gap: 1rem;
+}
+
+ @media (max-width: 480px) {
+  .input-container {
+    max-width: 100%;
+    margin: 0.75rem auto;
+    gap: 0.75rem;
+    padding: 0 0.5rem;
+  }
+}
+
+.input-container input {
+  min-height: 50px;
+  background-color: var(--neutral-transparent);
+  border: 1px solid var(--neutral-medium);
+  border-radius: 12px;
+  padding: 10px;
+  color: #fff;
+  font-family: "Inconsolata", monospace;
+  font-size: large;
+}
+
+ @media (max-width: 480px) {
+  .input-container input {
+    min-height: 45px;
+    padding: 8px 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+}
+
+.input-container input::placeholder {
+  color: var(--neutral-light);
+  font-family: "Inconsolata", monospace;
+}
+
+.submit-btn {
+  min-height: 50px;
+  font-size: larger;
+  font-family: "Inconsolata", monospace;
+  background-color: var(--orange-dark);
+  border: none;
+  font-weight: bolder;
+  color: var(--neutral-black);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+ @media (max-width: 480px) {
+  .submit-btn {
+    min-height: 45px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+  }
+}
+
+.ticket-container {
+  background-color: var(--neutral-medium);
+  background: url(assets/images/pattern-ticket.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  aspect-ratio: 16/ 9;
+  max-width: 500px;
+  padding: 1rem;
+  margin: 4rem auto;
+  position: relative;
+  border-radius: 0.5rem;
+}
+
+ @media (max-width: 480px) {
+  .ticket-container {
+    max-width: 95%;
+    padding: 0.75rem;
+    margin: 2rem auto;
+    aspect-ratio: 16/10;
+  }
+}
+
+.ticket-container .logo {
+  margin-bottom: 0.5rem;
+  font-size: 2.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+ @media (max-width: 480px) {
+  .ticket-container .logo {
+    font-size: 2rem;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+}
+
+.ticket-container .date {
+  color: var(--neutral-medium);
+  padding-left: 1.5rem;
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+ @media (max-width: 480px) {
+  .ticket-container .date {
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+  }
+}
+
+.ticket-container .ticket-user {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+ @media (max-width: 480px) {
+  .ticket-container .ticket-user {
+    gap: 0.25rem;
+  }
+}
+
+.ticket-container .ticket-user img {
+  width: 65px;
+  border-radius: 0.75rem;
+}
+
+ @media (max-width: 480px) {
+  .ticket-container .ticket-user img {
+    width: 50px;
+    border-radius: 0.5rem;
+  }
+}
+
+.ticket-container .ticket-user #display-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+ @media (max-width: 480px) {
+  .ticket-container .ticket-user #display-name {
+    font-size: 1.2rem;
+  }
+}
+
+.ticket-container .ticket-user .github-username {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+ @media (max-width: 480px) {
+  .ticket-container .ticket-user .github-username {
+    gap: 0.25rem;
+  }
+}
+
+.ticket-container .ticket-user .github-username img {
+  width: 20px;
+}
+
+ @media (max-width: 480px) {
+  .ticket-container .ticket-user .github-username img {
+    width: 16px;
+  }
+}
+
+.ticket-container .ticket-number {
+  color: var(--neutral-medium);
+  font-size: 1.75rem;
+  position: absolute;
+  right: 5px;
+  top: 36%;
+  transform: rotate(90deg);
+}
+
+ @media (max-width: 480px) {
+  .ticket-container .ticket-number {
+    font-size: 1.25rem;
+    right: 2px;
+    top: 40%;
+  }
+}
+
+ @media (max-width: 480px) {
+   button, 
+  input[type="submit"], 
+  .action-btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+   .upload-wrapper,
+  .input-container {
+    margin-bottom: 1rem;
+  }
+  
+   body {
+    font-size: 16px;  
+  }
+  
+   form {
+    width: 100%;
+  }
+  
+   .main {
+    padding: 0.5rem;
+  }
+  
+   .main header {
+    margin: 5px 0 15px;
+  }
+  
+  .main header img {
+    max-width: 200px;
+    height: auto;
+  }
+  
+   .main .heading_container h2 {
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+  }
+  
+  .main .heading_container h3 {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+  }
+  
+   .ticket-container .user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .ticket-container .user-info #display-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  
+  .ticket-container .user-info .github-username {
+    font-size: 0.8rem;
+  }
+  
+  .ticket-container .user-info .github-username span {
+    font-size: 0.8rem;
+  }
+}
+
+ @media (min-width: 481px) and (max-width: 767px) {
+  .ticket-container {
+    max-width: 90%;
+    margin: 3rem auto;
+  }
+  
+  .upload-wrapper,
+  .input-container {
+    max-width: 400px;
+  }
+  
+  .heading_container {
+    max-width: 600px;
+  }
+  
+   .main header img {
+    max-width: 250px;
+    height: auto;
+  }
+  
+  .main .heading_container h2 {
+    font-size: 1.8rem;
+  }
+  
+  .main .heading_container h3 {
+    font-size: 1rem;
+  }
+  
+  .ticket-container .user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+ @media (min-width: 1024px) {
+  .main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .main header img {
+    max-width: 300px;
+    height: auto;
+  }
+  
+  .main .heading_container h2 {
+    font-size: 2.5rem;
+  }
+  
+  .main .heading_container h3 {
+    font-size: 1.2rem;
+  }
+}

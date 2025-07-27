@@ -34,12 +34,11 @@ cd conference-ticket-generator
 open index.html
 
 
+Page 1:
+<img width="1887" height="896" alt="image" src="https://github.com/user-attachments/assets/e4d24841-3c2d-4b56-8dfb-cbec53874eeb" />
 
 
-Page 1 :
-<img width="1893" height="892" alt="image" src="https://github.com/user-attachments/assets/3913c6b6-846e-4c44-bc48-a2ad845a3482" /> <img width="1893" height="892" alt="image" src="https://github.com/user-attachments/assets/acffa6d7-dc99-4a11-8720-c5de5484d8c1" />
- 
-Page 2 : 
-<img width="1915" height="885" alt="image" src="https://github.com/user-attachments/assets/650be3ff-2807-46a8-a0f8-a6e202057ce6" />
+Page 2:
+ <img width="1910" height="896" alt="image" src="https://github.com/user-attachments/assets/261fcdbb-0553-4fb8-b98d-039af16f7f4b" />
 
  

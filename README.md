@@ -23,6 +23,15 @@ Check out the live demo: [Your Demo Link Here](https://your-demo-url.com)
 - HTML
 - CSS (Flexbox & custom styling)
 - JavaScript (vanilla)
+- 
+Page 1:
+<img width="1887" height="896" alt="image" src="https://github.com/user-attachments/assets/e4d24841-3c2d-4b56-8dfb-cbec53874eeb" />
+
+
+Page 2:
+ <img width="1910" height="896" alt="image" src="https://github.com/user-attachments/assets/261fcdbb-0553-4fb8-b98d-039af16f7f4b" />
+
+ 
 
 ## 📦 Installation
 
@@ -34,11 +43,3 @@ cd conference-ticket-generator
 open index.html
 
 
-Page 1:
-<img width="1887" height="896" alt="image" src="https://github.com/user-attachments/assets/e4d24841-3c2d-4b56-8dfb-cbec53874eeb" />
-
-
-Page 2:
- <img width="1910" height="896" alt="image" src="https://github.com/user-attachments/assets/261fcdbb-0553-4fb8-b98d-039af16f7f4b" />
-
- 
